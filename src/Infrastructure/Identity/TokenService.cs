@@ -2,17 +2,17 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Identity.Tokens;
-using FSH.WebApi.Infrastructure.Auth;
-using FSH.WebApi.Infrastructure.Auth.Jwt;
-using FSH.WebApi.Shared.Authorization;
+using Demo.WebApi.Application.Common.Exceptions;
+using Demo.WebApi.Application.Identity.Tokens;
+using Demo.WebApi.Infrastructure.Auth;
+using Demo.WebApi.Infrastructure.Auth.Jwt;
+using Demo.WebApi.Shared.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace Demo.WebApi.Infrastructure.Identity;
 
 internal class TokenService : ITokenService
 {

@@ -1,16 +1,16 @@
-using FSH.WebApi.Application.Common.Events;
-using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Common.Interfaces;
-using FSH.WebApi.Application.Identity.Roles;
-using FSH.WebApi.Domain.Identity;
-using FSH.WebApi.Infrastructure.Persistence.Context;
-using FSH.WebApi.Shared.Authorization;
+using Demo.WebApi.Application.Common.Events;
+using Demo.WebApi.Application.Common.Exceptions;
+using Demo.WebApi.Application.Common.Interfaces;
+using Demo.WebApi.Application.Identity.Roles;
+using Demo.WebApi.Domain.Identity;
+using Demo.WebApi.Infrastructure.Persistence.Context;
+using Demo.WebApi.Shared.Authorization;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace Demo.WebApi.Infrastructure.Identity;
 
 internal class RoleService : IRoleService
 {

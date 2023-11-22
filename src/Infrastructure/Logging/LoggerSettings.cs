@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Infrastructure.Logging;
+namespace Demo.WebApi.Infrastructure.Logging;
 
 public class LoggerSettings
 {

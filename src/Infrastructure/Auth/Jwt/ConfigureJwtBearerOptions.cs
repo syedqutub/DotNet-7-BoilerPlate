@@ -1,11 +1,11 @@
 ﻿using System.Security.Claims;
 using System.Text;
-using FSH.WebApi.Application.Common.Exceptions;
+using Demo.WebApi.Application.Common.Exceptions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace FSH.WebApi.Infrastructure.Auth.Jwt;
+namespace Demo.WebApi.Infrastructure.Auth.Jwt;
 
 public class ConfigureJwtBearerOptions : IConfigureNamedOptions<JwtBearerOptions>
 {

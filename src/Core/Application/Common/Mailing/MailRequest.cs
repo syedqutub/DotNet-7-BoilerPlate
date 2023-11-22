@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Common.Mailing;
+namespace Demo.WebApi.Application.Common.Mailing;
 
 public class MailRequest
 {

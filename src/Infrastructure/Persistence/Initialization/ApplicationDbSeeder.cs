@@ -1,11 +1,11 @@
-﻿using FSH.WebApi.Infrastructure.Identity;
-using FSH.WebApi.Infrastructure.Persistence.Context;
-using FSH.WebApi.Shared.Authorization;
+﻿using Demo.WebApi.Infrastructure.Identity;
+using Demo.WebApi.Infrastructure.Persistence.Context;
+using Demo.WebApi.Shared.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Initialization;
+namespace Demo.WebApi.Infrastructure.Persistence.Initialization;
 
 internal class ApplicationDbSeeder
 {

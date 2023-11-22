@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace FSH.WebApi.Infrastructure.Auth.Jwt;
+namespace Demo.WebApi.Infrastructure.Auth.Jwt;
 
 internal static class Startup
 {

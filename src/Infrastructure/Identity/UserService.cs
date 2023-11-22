@@ -1,25 +1,25 @@
 using Ardalis.Specification;
 using Ardalis.Specification.EntityFrameworkCore;
-using FSH.WebApi.Application.Common.Caching;
-using FSH.WebApi.Application.Common.Events;
-using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Common.FileStorage;
-using FSH.WebApi.Application.Common.Interfaces;
-using FSH.WebApi.Application.Common.Mailing;
-using FSH.WebApi.Application.Common.Models;
-using FSH.WebApi.Application.Common.Specification;
-using FSH.WebApi.Application.Identity.Users;
-using FSH.WebApi.Domain.Identity;
-using FSH.WebApi.Infrastructure.Auth;
-using FSH.WebApi.Infrastructure.Persistence.Context;
-using FSH.WebApi.Shared.Authorization;
+using Demo.WebApi.Application.Common.Caching;
+using Demo.WebApi.Application.Common.Events;
+using Demo.WebApi.Application.Common.Exceptions;
+using Demo.WebApi.Application.Common.FileStorage;
+using Demo.WebApi.Application.Common.Interfaces;
+using Demo.WebApi.Application.Common.Mailing;
+using Demo.WebApi.Application.Common.Models;
+using Demo.WebApi.Application.Common.Specification;
+using Demo.WebApi.Application.Identity.Users;
+using Demo.WebApi.Domain.Identity;
+using Demo.WebApi.Infrastructure.Auth;
+using Demo.WebApi.Infrastructure.Persistence.Context;
+using Demo.WebApi.Shared.Authorization;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace Demo.WebApi.Infrastructure.Identity;
 
 internal partial class UserService : IUserService
 {

@@ -1,4 +1,4 @@
-using FSH.WebApi.Infrastructure.Auth.AzureAd;
+using Demo.WebApi.Infrastructure.Auth.AzureAd;
 
 namespace System.Security.Claims;
 

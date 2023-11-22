@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Infrastructure.Mapping;
+﻿namespace Demo.WebApi.Infrastructure.Mapping;
 
 public class MapsterSettings
 {

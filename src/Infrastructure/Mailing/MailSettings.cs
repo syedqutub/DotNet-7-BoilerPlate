@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Infrastructure.Mailing;
+namespace Demo.WebApi.Infrastructure.Mailing;
 
 public class MailSettings
 {

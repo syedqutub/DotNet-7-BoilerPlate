@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace FSH.WebApi.Application.Common.Exceptions;
+namespace Demo.WebApi.Application.Common.Exceptions;
 
 public class NotFoundException : CustomException
 {

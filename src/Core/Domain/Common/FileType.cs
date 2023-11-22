@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace FSH.WebApi.Domain.Common;
+namespace Demo.WebApi.Domain.Common;
 
 public enum FileType
 {

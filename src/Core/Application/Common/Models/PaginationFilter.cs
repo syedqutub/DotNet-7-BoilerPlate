@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Common.Models;
+namespace Demo.WebApi.Application.Common.Models;
 
 public class PaginationFilter : BaseFilter
 {

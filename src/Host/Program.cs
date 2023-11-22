@@ -1,9 +1,9 @@
-using FSH.WebApi.Application;
-using FSH.WebApi.Host.Configurations;
-using FSH.WebApi.Host.Controllers;
-using FSH.WebApi.Infrastructure;
-using FSH.WebApi.Infrastructure.Common;
-using FSH.WebApi.Infrastructure.Logging.Serilog;
+using Demo.WebApi.Application;
+using Demo.WebApi.Host.Configurations;
+using Demo.WebApi.Host.Controllers;
+using Demo.WebApi.Infrastructure;
+using Demo.WebApi.Infrastructure.Common;
+using Demo.WebApi.Infrastructure.Logging.Serilog;
 using Serilog;
 using Serilog.Formatting.Compact;
 

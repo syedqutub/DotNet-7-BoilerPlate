@@ -1,11 +1,11 @@
 ﻿using System.Security.Claims;
-using FSH.WebApi.Infrastructure.Common;
+using Demo.WebApi.Infrastructure.Common;
 using Hangfire.Client;
 using Hangfire.Logging;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.WebApi.Infrastructure.BackgroundJobs;
+namespace Demo.WebApi.Infrastructure.BackgroundJobs;
 
 public class FSHJobFilter : IClientFilter
 {

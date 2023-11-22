@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Application.Identity.Roles;
+namespace Demo.WebApi.Application.Identity.Roles;
 
 public class UpdateRolePermissionsRequest
 {

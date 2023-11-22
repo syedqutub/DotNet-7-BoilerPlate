@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.WebApi.Infrastructure.Middleware;
+namespace Demo.WebApi.Infrastructure.Middleware;
 
 internal static class Startup
 {

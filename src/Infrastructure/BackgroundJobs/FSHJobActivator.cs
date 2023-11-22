@@ -1,10 +1,10 @@
-﻿using FSH.WebApi.Infrastructure.Auth;
-using FSH.WebApi.Infrastructure.Common;
+﻿using Demo.WebApi.Infrastructure.Auth;
+using Demo.WebApi.Infrastructure.Common;
 using Hangfire;
 using Hangfire.Server;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.WebApi.Infrastructure.BackgroundJobs;
+namespace Demo.WebApi.Infrastructure.BackgroundJobs;
 
 public class FSHJobActivator : JobActivator
 {

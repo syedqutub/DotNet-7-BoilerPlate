@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace FSH.WebApi.Application.Common.Interfaces;
+namespace Demo.WebApi.Application.Common.Interfaces;
 
 public interface ICurrentUser
 {

@@ -1,10 +1,10 @@
 using System.Data;
 using Dapper;
-using FSH.WebApi.Application.Common.Persistence;
-using FSH.WebApi.Domain.Common.Contracts;
-using FSH.WebApi.Infrastructure.Persistence.Context;
+using Demo.WebApi.Application.Common.Persistence;
+using Demo.WebApi.Domain.Common.Contracts;
+using Demo.WebApi.Infrastructure.Persistence.Context;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Repository;
+namespace Demo.WebApi.Infrastructure.Persistence.Repository;
 
 public class DapperRepository : IDapperRepository
 {

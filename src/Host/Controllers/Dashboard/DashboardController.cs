@@ -1,6 +1,6 @@
-using FSH.WebApi.Application.Dashboard;
+using Demo.WebApi.Application.Dashboard;
 
-namespace FSH.WebApi.Host.Controllers.Dashboard;
+namespace Demo.WebApi.Host.Controllers.Dashboard;
 
 public class DashboardController : VersionedApiController
 {

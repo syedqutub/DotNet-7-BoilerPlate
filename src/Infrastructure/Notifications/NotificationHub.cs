@@ -1,10 +1,10 @@
-﻿using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Common.Interfaces;
+﻿using Demo.WebApi.Application.Common.Exceptions;
+using Demo.WebApi.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
 
-namespace FSH.WebApi.Infrastructure.Notifications;
+namespace Demo.WebApi.Infrastructure.Notifications;
 
 [Authorize]
 public class NotificationHub : Hub, ITransientService

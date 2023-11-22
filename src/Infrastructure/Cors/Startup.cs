@@ -1,9 +1,9 @@
-﻿using FSH.WebApi.Infrastructure.Common.Settings;
+﻿using Demo.WebApi.Infrastructure.Common.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.WebApi.Infrastructure.Cors;
+namespace Demo.WebApi.Infrastructure.Cors;
 
 internal static class Startup
 {

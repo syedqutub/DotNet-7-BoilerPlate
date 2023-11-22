@@ -1,11 +1,11 @@
-using FSH.WebApi.Infrastructure.Common.Extensions;
+using Demo.WebApi.Infrastructure.Common.Extensions;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using OrchardCore.Localization;
 
-namespace FSH.WebApi.Infrastructure.Localization;
+namespace Demo.WebApi.Infrastructure.Localization;
 
 /// <summary>
 /// Provides PO files for FSH Localization.

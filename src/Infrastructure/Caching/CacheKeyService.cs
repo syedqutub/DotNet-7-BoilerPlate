@@ -1,6 +1,6 @@
-﻿using FSH.WebApi.Application.Common.Caching;
+﻿using Demo.WebApi.Application.Common.Caching;
 
-namespace FSH.WebApi.Infrastructure.Caching;
+namespace Demo.WebApi.Infrastructure.Caching;
 
 public class CacheKeyService : ICacheKeyService
 {

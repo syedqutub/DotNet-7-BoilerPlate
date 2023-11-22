@@ -1,7 +1,7 @@
 using System.Text;
 using Microsoft.Extensions.Primitives;
 
-namespace FSH.WebApi.Infrastructure.Common.Extensions;
+namespace Demo.WebApi.Infrastructure.Common.Extensions;
 
 public class PathExtensions
 {

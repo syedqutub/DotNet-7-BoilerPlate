@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Domain.Catalog;
+namespace Demo.WebApi.Domain.Catalog;
 
 public class Product : AuditableEntity, IAggregateRoot
 {

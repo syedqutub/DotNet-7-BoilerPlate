@@ -1,10 +1,10 @@
-﻿using FSH.WebApi.Application.Common.Exceptions;
-using FSH.WebApi.Application.Identity.Users;
-using FSH.WebApi.Domain.Identity;
-using FSH.WebApi.Shared.Authorization;
+﻿using Demo.WebApi.Application.Common.Exceptions;
+using Demo.WebApi.Application.Identity.Users;
+using Demo.WebApi.Domain.Identity;
+using Demo.WebApi.Shared.Authorization;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace Demo.WebApi.Infrastructure.Identity;
 
 internal partial class UserService
 {

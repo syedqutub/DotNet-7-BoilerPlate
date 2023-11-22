@@ -1,4 +1,4 @@
-namespace FSH.WebApi.Infrastructure.SecurityHeaders;
+namespace Demo.WebApi.Infrastructure.SecurityHeaders;
 
 public class SecurityHeaders
 {

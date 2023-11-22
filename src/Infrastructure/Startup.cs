@@ -1,21 +1,21 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using FSH.WebApi.Infrastructure.Auth;
-using FSH.WebApi.Infrastructure.BackgroundJobs;
-using FSH.WebApi.Infrastructure.Caching;
-using FSH.WebApi.Infrastructure.Common;
-using FSH.WebApi.Infrastructure.Cors;
-using FSH.WebApi.Infrastructure.FileStorage;
-using FSH.WebApi.Infrastructure.Localization;
-using FSH.WebApi.Infrastructure.Mailing;
-using FSH.WebApi.Infrastructure.Mapping;
-using FSH.WebApi.Infrastructure.Middleware;
-using FSH.WebApi.Infrastructure.Notifications;
-using FSH.WebApi.Infrastructure.OpenApi;
-using FSH.WebApi.Infrastructure.Persistence;
-using FSH.WebApi.Infrastructure.Persistence.Initialization;
-using FSH.WebApi.Infrastructure.SecurityHeaders;
-using FSH.WebApi.Infrastructure.Validations;
+using Demo.WebApi.Infrastructure.Auth;
+using Demo.WebApi.Infrastructure.BackgroundJobs;
+using Demo.WebApi.Infrastructure.Caching;
+using Demo.WebApi.Infrastructure.Common;
+using Demo.WebApi.Infrastructure.Cors;
+using Demo.WebApi.Infrastructure.FileStorage;
+using Demo.WebApi.Infrastructure.Localization;
+using Demo.WebApi.Infrastructure.Mailing;
+using Demo.WebApi.Infrastructure.Mapping;
+using Demo.WebApi.Infrastructure.Middleware;
+using Demo.WebApi.Infrastructure.Notifications;
+using Demo.WebApi.Infrastructure.OpenApi;
+using Demo.WebApi.Infrastructure.Persistence;
+using Demo.WebApi.Infrastructure.Persistence.Initialization;
+using Demo.WebApi.Infrastructure.SecurityHeaders;
+using Demo.WebApi.Infrastructure.Validations;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
@@ -25,13 +25,13 @@ using Microsoft.Extensions.DependencyInjection;
 
 [assembly: InternalsVisibleTo("Infrastructure.Test")]
 
-namespace FSH.WebApi.Infrastructure;
+namespace Demo.WebApi.Infrastructure;
 
 public static class Startup
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration config)
     {
-        var applicationAssembly = typeof(FSH.WebApi.Application.Startup).GetTypeInfo().Assembly;
+        var applicationAssembly = typeof(global::Demo.WebApi.Application.Startup).GetTypeInfo().Assembly;
         MapsterSettings.Configure();
         return services
             .AddApiVersioning()

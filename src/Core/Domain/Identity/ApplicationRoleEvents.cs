@@ -1,4 +1,4 @@
-﻿namespace FSH.WebApi.Domain.Identity;
+﻿namespace Demo.WebApi.Domain.Identity;
 
 public abstract class ApplicationRoleEvent : DomainEvent
 {

@@ -2,7 +2,7 @@ using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 
-namespace FSH.WebApi.Infrastructure.Persistence.Context;
+namespace Demo.WebApi.Infrastructure.Persistence.Context;
 
 internal static class ModelBuilderExtensions
 {

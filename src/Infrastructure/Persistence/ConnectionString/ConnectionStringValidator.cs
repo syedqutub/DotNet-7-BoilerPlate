@@ -1,5 +1,5 @@
-﻿using FSH.WebApi.Application.Common.Persistence;
-using FSH.WebApi.Infrastructure.Common;
+﻿using Demo.WebApi.Application.Common.Persistence;
+using Demo.WebApi.Infrastructure.Common;
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -7,7 +7,7 @@ using MySqlConnector;
 using Npgsql;
 using System.Data.SqlClient;
 
-namespace FSH.WebApi.Infrastructure.Persistence.ConnectionString;
+namespace Demo.WebApi.Infrastructure.Persistence.ConnectionString;
 
 internal class ConnectionStringValidator : IConnectionStringValidator
 {

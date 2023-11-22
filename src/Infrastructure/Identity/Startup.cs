@@ -1,8 +1,8 @@
-using FSH.WebApi.Infrastructure.Persistence.Context;
+using Demo.WebApi.Infrastructure.Persistence.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FSH.WebApi.Infrastructure.Identity;
+namespace Demo.WebApi.Infrastructure.Identity;
 
 internal static class Startup
 {

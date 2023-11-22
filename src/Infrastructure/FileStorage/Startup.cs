@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.FileProviders;
 
-namespace FSH.WebApi.Infrastructure.FileStorage;
+namespace Demo.WebApi.Infrastructure.FileStorage;
 
 internal static class Startup
 {

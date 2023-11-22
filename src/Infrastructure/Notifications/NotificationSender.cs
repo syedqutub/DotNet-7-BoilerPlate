@@ -1,9 +1,9 @@
-﻿using FSH.WebApi.Application.Common.Interfaces;
-using FSH.WebApi.Shared.Notifications;
+﻿using Demo.WebApi.Application.Common.Interfaces;
+using Demo.WebApi.Shared.Notifications;
 using Microsoft.AspNetCore.SignalR;
-using static FSH.WebApi.Shared.Notifications.NotificationConstants;
+using static Demo.WebApi.Shared.Notifications.NotificationConstants;
 
-namespace FSH.WebApi.Infrastructure.Notifications;
+namespace Demo.WebApi.Infrastructure.Notifications;
 
 public class NotificationSender : INotificationSender
 {
