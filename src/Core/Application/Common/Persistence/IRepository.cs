@@ -6,9 +6,13 @@
 /// <summary>
 /// The regular read/write repository for an aggregate root.
 /// </summary>
-public interface IRepository<T> : IRepositoryBase<T>
+public interface IRepository<T> : IRepositoryBase<T>, IReadRepository<T>
     where T : class, IAggregateRoot
 {
+    Task UpdateRangeAsync(IEnumerable<T> entities);
+    Task AddRangeAsync(IEnumerable<T> entities);
+    Task AddWithoutSaveAsync(T entity);
+    void UpdateWithoutSave(T entity);
 }
 
 /// <summary>
@@ -17,6 +21,8 @@ public interface IRepository<T> : IRepositoryBase<T>
 public interface IReadRepository<T> : IReadRepositoryBase<T>
     where T : class, IAggregateRoot
 {
+    IQueryable<T> GetAll();
+    IQueryable<TResult> GetAll<TResult>();
 }
 
 /// <summary>

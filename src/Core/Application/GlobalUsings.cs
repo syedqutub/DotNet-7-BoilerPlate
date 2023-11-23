@@ -8,7 +8,6 @@ global using Demo.WebApi.Application.Common.Models;
 global using Demo.WebApi.Application.Common.Persistence;
 global using Demo.WebApi.Application.Common.Specification;
 global using Demo.WebApi.Application.Common.Validation;
-global using Demo.WebApi.Domain.Catalog;
 global using Demo.WebApi.Domain.Common;
 global using Demo.WebApi.Domain.Common.Contracts;
 global using Demo.WebApi.Shared.Notifications;

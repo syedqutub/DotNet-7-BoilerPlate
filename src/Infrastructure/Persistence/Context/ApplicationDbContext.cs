@@ -1,6 +1,5 @@
 using Demo.WebApi.Application.Common.Events;
 using Demo.WebApi.Application.Common.Interfaces;
-using Demo.WebApi.Domain.Catalog;
 using Demo.WebApi.Infrastructure.Persistence.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -14,13 +13,11 @@ public class ApplicationDbContext : BaseDbContext
     {
     }
 
-    public DbSet<Product> Products => Set<Product>();
-    public DbSet<Brand> Brands => Set<Brand>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.HasDefaultSchema(SchemaNames.Catalog);
+        modelBuilder.HasDefaultSchema(SchemaNames.Public);
     }
 }
