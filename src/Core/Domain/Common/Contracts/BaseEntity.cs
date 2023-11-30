@@ -5,11 +5,11 @@ namespace Demo.WebApi.Domain.Common.Contracts;
 
 public abstract class BaseEntity : BaseEntity<DefaultIdType>
 {
-    protected BaseEntity() => Id = NewId.Next().ToGuid();
 }
 
 public abstract class BaseEntity<TId> : IEntity<TId>
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public TId Id { get; protected set; } = default!;
 
     [NotMapped]
