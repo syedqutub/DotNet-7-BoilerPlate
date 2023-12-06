@@ -5,7 +5,7 @@ using Demo.WebApi.Application.Common.Models;
 using Demo.WebApi.Application.Common.Specification;
 using Microsoft.EntityFrameworkCore;
 
-namespace FSH.WebApi.Infrastructure.Common.Extensions;
+namespace Demo.WebApi.Infrastructure.Common.Extensions;
 
 public static class PaginationResponseExtensions
 {

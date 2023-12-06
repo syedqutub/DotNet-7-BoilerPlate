@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace Demo.WebApi.Infrastructure.Identity;
+namespace Demo.WebApi.Domain.Identity;
 
 public class ApplicationRole : IdentityRole
 {

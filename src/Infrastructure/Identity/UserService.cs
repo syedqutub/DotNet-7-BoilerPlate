@@ -13,6 +13,7 @@ using Demo.WebApi.Domain.Identity;
 using Demo.WebApi.Infrastructure.Auth;
 using Demo.WebApi.Infrastructure.Persistence.Context;
 using Demo.WebApi.Shared.Authorization;
+using Demo.WebApi.Domain.Identity;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

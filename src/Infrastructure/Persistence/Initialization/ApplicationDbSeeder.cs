@@ -1,6 +1,6 @@
-﻿using Demo.WebApi.Infrastructure.Identity;
-using Demo.WebApi.Infrastructure.Persistence.Context;
+﻿using Demo.WebApi.Infrastructure.Persistence.Context;
 using Demo.WebApi.Shared.Authorization;
+using Demo.WebApi.Domain.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;

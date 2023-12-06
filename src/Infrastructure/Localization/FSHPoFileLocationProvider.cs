@@ -24,7 +24,7 @@ public class FSHPoFileLocationProvider : ILocalizationFileLocationProvider
     public IEnumerable<IFileInfo> GetLocations(string cultureName)
     {
         // Loads all *.po files from the culture folder under the Resource Path.
-        // for example, src\Host\Localization\en-US\FSH.Exceptions.po
+        // for example, src\Host\Localization\en-US\Demo.Exceptions.po
         foreach (var file in _fileProvider.GetDirectoryContents(PathExtensions.Combine(_resourcesContainer, cultureName)))
         {
             yield return file;

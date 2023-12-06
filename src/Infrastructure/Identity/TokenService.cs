@@ -7,6 +7,7 @@ using Demo.WebApi.Application.Identity.Tokens;
 using Demo.WebApi.Infrastructure.Auth;
 using Demo.WebApi.Infrastructure.Auth.Jwt;
 using Demo.WebApi.Shared.Authorization;
+using Demo.WebApi.Domain.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;

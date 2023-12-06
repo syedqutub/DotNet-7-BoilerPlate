@@ -5,6 +5,7 @@ using Demo.WebApi.Application.Identity.Users;
 using Demo.WebApi.Domain.Common;
 using Demo.WebApi.Domain.Identity;
 using Demo.WebApi.Shared.Authorization;
+using Demo.WebApi.Domain.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;

@@ -1,6 +1,7 @@
 using System.Text;
 using Demo.WebApi.Application.Common.Exceptions;
 using Demo.WebApi.Infrastructure.Common;
+using Demo.WebApi.Domain.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 

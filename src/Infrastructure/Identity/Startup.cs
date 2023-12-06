@@ -1,4 +1,5 @@
 using Demo.WebApi.Infrastructure.Persistence.Context;
+using Demo.WebApi.Domain.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
