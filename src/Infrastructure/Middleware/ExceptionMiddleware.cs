@@ -1,6 +1,8 @@
 using System.Net;
+using Demo.WebApi.Application.Common.Enums;
 using Demo.WebApi.Application.Common.Exceptions;
 using Demo.WebApi.Application.Common.Interfaces;
+using Demo.WebApi.Application.Common.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Localization;
 using Serilog;
@@ -39,62 +41,45 @@ internal class ExceptionMiddleware : IMiddleware
             string errorId = Guid.NewGuid().ToString();
             LogContext.PushProperty("ErrorId", errorId);
             LogContext.PushProperty("StackTrace", exception.StackTrace);
-            var errorResult = new ErrorResult
+            var errorResult = new HttpResponseMetadata
             {
-                Source = exception.TargetSite?.DeclaringType?.FullName,
-                Exception = exception.Message.Trim(),
+                Message = exception.Message.Trim(),
+                Type = HttpResponseType.Error.ToString(),
                 ErrorId = errorId,
-                SupportMessage = _t["Provide the ErrorId {0} to the support team for further analysis.", errorId]
             };
 
-            if (exception is not CustomException && exception.InnerException != null)
-            {
-                while (exception.InnerException != null)
-                {
-                    exception = exception.InnerException;
-                }
-            }
-
-            if (exception is FluentValidation.ValidationException fluentException)
-            {
-                errorResult.Exception = "One or More Validations failed.";
-                foreach (var error in fluentException.Errors)
-                {
-                    errorResult.Messages.Add(error.ErrorMessage);
-                }
-            }
-
+            var response = context.Response;
             switch (exception)
             {
                 case CustomException e:
-                    errorResult.StatusCode = (int)e.StatusCode;
+                    response.StatusCode = errorResult.StatusCode = (int)e.StatusCode;
                     if (e.ErrorMessages is not null)
                     {
-                        errorResult.Messages = e.ErrorMessages;
+                        errorResult.Message = string.Join(Environment.NewLine, e.ErrorMessages);
                     }
 
                     break;
 
                 case KeyNotFoundException:
-                    errorResult.StatusCode = (int)HttpStatusCode.NotFound;
-                    break;
-
-                case FluentValidation.ValidationException:
-                    errorResult.StatusCode = (int)HttpStatusCode.BadRequest;
+                    response.StatusCode = errorResult.StatusCode = (int)HttpStatusCode.NotFound;
                     break;
 
                 default:
-                    errorResult.StatusCode = (int)HttpStatusCode.InternalServerError;
+                    response.StatusCode = errorResult.StatusCode = (int)HttpStatusCode.InternalServerError;
                     break;
             }
 
-            Log.Error($"{errorResult.Exception} Request failed with Status Code {errorResult.StatusCode} and Error Id {errorId}.");
-            var response = context.Response;
+            Log.Error($"{errorResult.Message} Request failed with Status Code {errorResult.StatusCode} and Error Id {errorId}.");
+
+            HttpResponseDto<object> httpResponse = new HttpResponseDto<object>
+            {
+                Metadata = errorResult,
+            };
+
             if (!response.HasStarted)
             {
                 response.ContentType = "application/json";
-                response.StatusCode = errorResult.StatusCode;
-                await response.WriteAsync(_jsonSerializer.Serialize(errorResult));
+                await response.WriteAsync(_jsonSerializer.Serialize(httpResponse));
             }
             else
             {

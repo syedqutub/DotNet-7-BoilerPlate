@@ -7,6 +7,7 @@ public class HttpResponseMetadata
     public int StatusCode { get; set; }
     public string? Message { get; set; }
     public object? ValidationErrors { get; set; }
+    public string? ErrorId { get; set; }
 }
 
 public class HttpResponseDto<T>

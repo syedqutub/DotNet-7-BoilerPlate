@@ -142,19 +142,23 @@ public abstract class BaseDbContext : IdentityDbContext<ApplicationUser, Applica
                         break;
 
                     case EntityState.Modified:
-                        if (property.IsModified && entry.Entity is ISoftDelete && property.OriginalValue == null && property.CurrentValue != null)
+                        if (entry.Entity is ISoftDelete && property.OriginalValue == null && property.CurrentValue != null)
                         {
                             trailEntry.ChangedColumns.Add(propertyName);
                             trailEntry.TrailType = TrailType.Delete;
                             trailEntry.OldValues[propertyName] = property.OriginalValue;
                             trailEntry.NewValues[propertyName] = property.CurrentValue;
                         }
-                        else if (property.IsModified && property.OriginalValue?.Equals(property.CurrentValue) == false)
+                        else if (property.OriginalValue?.Equals(property.CurrentValue) == false)
                         {
                             trailEntry.ChangedColumns.Add(propertyName);
                             trailEntry.TrailType = TrailType.Update;
                             trailEntry.OldValues[propertyName] = property.OriginalValue;
                             trailEntry.NewValues[propertyName] = property.CurrentValue;
+                        }
+                        else
+                        {
+                            property.IsModified = false;
                         }
 
                         break;
