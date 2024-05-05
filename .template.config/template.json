@@ -14,11 +14,11 @@
     "language": "C#",
     "type": "project"
   },
-  "identity": "FullStackHero.WebAPI.Boilerplate",
-  "name": "FullStackHero WebAPI Boilerplate",
+  "identity": "SQ.WebAPI.Boilerplate",
+  "name": "SQ WebAPI Boilerplate",
   "description": "Clean Architecture Template for .NET 7.0 WebApi built with Multitenancy Support.",
-  "shortName": "fsh-api",
-  "sourceName": "FSH.WebApi",
+  "shortName": "sq-api",
+  "sourceName": "Demo.WebApi",
   "preferNameDirectory": true,
   "sources": [
     {
