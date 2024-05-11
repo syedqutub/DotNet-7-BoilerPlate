@@ -21,7 +21,7 @@
     },
     "Storage": {
       "StorageProvider": "postgresql",
-      "ConnectionString": "Host=localhost;Port=5432;Database=BoilerPlate;Username=postgres;Password=postgres;Include Error Detail=true",
+      "ConnectionString": "Host=localhost;Port=5432;Database=starter;Username=postgres;Password=1234;Include Error Detail=true",
       "Options": {
         "CommandBatchMaxTimeout": "00:05:00",
         "QueuePollInterval": "00:00:01",

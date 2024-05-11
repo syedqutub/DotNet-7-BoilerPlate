@@ -1,16 +1,16 @@
 using System.Security.Claims;
 using Demo.WebApi.Application.Auditing;
+using Demo.WebApi.Application.Common.Interfaces;
 using Demo.WebApi.Application.Identity.Users;
 using Demo.WebApi.Application.Identity.Users.Password;
 
 namespace Demo.WebApi.Host.Controllers.Identity;
 
-public class PersonalController : VersionNeutralApiController
+public class PersonalController(
+    IUserService _userService,
+    IAuditService _auditService,
+    ICurrentUser _currentUser) : VersionNeutralApiController
 {
-    private readonly IUserService _userService;
-
-    public PersonalController(IUserService userService) => _userService = userService;
-
     [HttpGet("profile")]
     [OpenApiOperation("Get profile details of currently logged in user.", "")]
     public async Task<ActionResult<UserDetailsDto>> GetProfileAsync(CancellationToken cancellationToken)
@@ -60,6 +60,6 @@ public class PersonalController : VersionNeutralApiController
     [OpenApiOperation("Get audit logs of currently logged in user.", "")]
     public Task<List<AuditDto>> GetLogsAsync()
     {
-        return Mediator.Send(new GetMyAuditLogsRequest());
+        return _auditService.GetUserTrailsAsync(_currentUser.GetUserId()); ;
     }
 }

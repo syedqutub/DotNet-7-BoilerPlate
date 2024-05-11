@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace Demo.WebApi.Host.Configurations;
 
 internal static class Startup
@@ -32,6 +34,7 @@ internal static class Startup
                 .AddJsonFile($"{configurationsDirectory}/securityheaders.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"{configurationsDirectory}/localization.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"{configurationsDirectory}/localization.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
+                .AddUserSecrets(Assembly.GetExecutingAssembly())
                 .AddEnvironmentVariables();
         return builder;
     }
